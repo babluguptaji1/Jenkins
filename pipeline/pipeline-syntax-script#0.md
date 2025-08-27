@@ -18,9 +18,14 @@ pipeline {
                 echo "Developer / Tester tester tests likh ke dega.."
             }
         }
+        stage("Push to Docker Hub"){
+            steps{
+                echo "Docker Hub"
+            }
+        }
         stage("Deploy"){
             steps{
-                sh "docker compose up -d"
+                sh "docker compose up -d --build"
                 echo "Docker compose se deploy bhi ho gaya.."
             }
         }
