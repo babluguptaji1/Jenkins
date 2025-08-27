@@ -9,6 +9,7 @@ pipeline {
         }
         stage("Build"){
             steps{
+            sh "docker build -t my-app ."
                 echo "Dockerfile code Build clone ho gaya.."
             }
         }
