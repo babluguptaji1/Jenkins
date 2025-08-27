@@ -20,6 +20,7 @@ pipeline {
         }
         stage("Deploy"){
             steps{
+                sh "docker compose up -d"
                 echo "Docker compose se deploy bhi ho gaya.."
             }
         }
