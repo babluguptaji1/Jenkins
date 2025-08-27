@@ -3,6 +3,7 @@ pipeline {
     stages{
         stage("code"){
             steps{
+             git url: "https://github.com/babluguptaji1/two-tier-flask-app.git", branch: "master"
                 echo "code clone ho gaya.."
             }
         }
